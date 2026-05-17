@@ -1,0 +1,8 @@
+{
+  "name": "Cognado Connect",
+  "description": "Learn Spanish through English and Armenian connections. Features theory, grammar bridges, and interactive word puzzles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

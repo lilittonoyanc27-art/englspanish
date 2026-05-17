@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Crimson Pro", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-spanish-red: #D62828;
+  --color-spanish-gold: #FCBF49;
+  --color-spanish-navy: #003049;
+  --color-parchment: #FDF0D5;
+}
+
+body {
+  @apply bg-stone-50 text-slate-900 font-sans antialiased;
+}
+
+.spanish-gradient {
+  background: linear-gradient(135deg, var(--color-spanish-red) 0%, #a01a1a 100%);
+}
+
+.card-accent {
+  @apply border-l-4 border-spanish-red;
+}
+
+.tab-active {
+  @apply border-b-2 border-spanish-red text-spanish-red font-bold;
+}
+
+.verb-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .verb-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.quiz-option {
+  @apply p-4 border-2 border-slate-200 rounded-xl transition-all cursor-pointer hover:border-spanish-navy hover:bg-slate-50;
+}
+
+.quiz-option-selected {
+  @apply border-spanish-navy bg-slate-100 ring-2 ring-spanish-navy/10;
+}
+
+.quiz-option-correct {
+  @apply border-green-500 bg-green-50 text-green-700;
+}
+
+.quiz-option-wrong {
+  @apply border-red-500 bg-red-50 text-red-700;
+}
